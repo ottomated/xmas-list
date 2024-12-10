@@ -28,6 +28,10 @@
 	let copied = $state(false);
 </script>
 
+<svelte:head>
+	<title>Edit your Xmas List</title>
+</svelte:head>
+
 <main class="flex max-w-sm flex-col p-4">
 	<h1 class="mb-4 text-lg">Editing Xmas List</h1>
 	<label>

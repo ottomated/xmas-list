@@ -37,6 +37,10 @@
 	$inspect(items);
 </script>
 
+<svelte:head>
+	<title>{name ? `${name}'s ` : ''}Xmas List</title>
+</svelte:head>
+
 <main class="flex max-w-sm flex-col p-4">
 	<h1 class="text-lg">{name ? `${name}'s ` : ''}Xmas List</h1>
 	<p class="text-sm italic text-neutral-300">
