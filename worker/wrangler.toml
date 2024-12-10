@@ -1,7 +1,7 @@
 #:schema node_modules/wrangler/config-schema.json
 name = "xmas-list-worker"
 main = "src/worker.ts"
-account_id = "fd27ce0a0cea8a365d723f2a9a8b9184"
+account_id = "54392aaba81d753fd12c3b659b790ed4"
 compatibility_date = "2024-09-02"
 
 [[durable_objects.bindings]]
