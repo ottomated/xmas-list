@@ -61,6 +61,12 @@
 		<button
 			disabled={!newItem}
 			class="text-sm text-blue-300 enabled:hover:underline disabled:text-neutral-400"
+			onkeydown={(ev) => {
+				if (ev.key === 'Enter') {
+					send({ type: 'add', item: newItem });
+					newItem = '';
+				}
+			}}
 			onclick={() => {
 				send({ type: 'add', item: newItem });
 				newItem = '';
