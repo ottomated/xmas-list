@@ -52,7 +52,7 @@
 	}}
 />
 
-<main class="flex max-w-sm flex-col p-4">
+<main class="flex max-w-md flex-col p-4">
 	<h1 class="text-lg">{name ? `${name}'s ` : ''}Xmas List</h1>
 	<p class="text-sm italic text-neutral-300">
 		Click to claim items anonymously.

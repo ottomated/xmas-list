@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<main class="flex max-w-sm flex-col p-4">
+<main class="flex max-w-md flex-col p-4">
 	<h1 class="text-lg">Anonymous Xmas Lists</h1>
 	<p class="text-sm italic text-neutral-300">
 		Problem: You want to share a christmas wishlist, but don't want two people

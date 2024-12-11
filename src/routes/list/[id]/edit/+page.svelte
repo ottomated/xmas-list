@@ -42,7 +42,7 @@
 	}}
 />
 
-<main class="flex max-w-sm flex-col p-4">
+<main class="flex max-w-md flex-col p-4">
 	<h1 class="mb-4 text-lg">Editing Xmas List</h1>
 	<label>
 		Your Name:
