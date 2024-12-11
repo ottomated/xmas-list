@@ -21,7 +21,7 @@ export class SocketObject extends DurableObject {
 	}
 
 	webSocketMessage(
-		_ws: WebSocket,
+		ws: WebSocket,
 		message: string | ArrayBuffer,
 	): void | Promise<void> {
 		if (typeof message !== 'string') return;
@@ -67,6 +67,14 @@ export class SocketObject extends DurableObject {
 				type: 'rename',
 				name: parsed.data.name,
 			});
+			return;
+		}
+		if (parsed.data.type === 'refresh') {
+			const payload: ServerToClient = {
+				type: 'sync',
+				data: this.getItems(),
+			};
+			ws.send(JSON.stringify(payload));
 			return;
 		}
 	}

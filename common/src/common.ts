@@ -13,6 +13,11 @@ export const clientToServerSchema = z
 			id: z.string(),
 			checked: z.boolean(),
 		}),
+	)
+	.or(
+		z.object({
+			type: z.literal('refresh'),
+		}),
 	);
 
 export type ClientToServer = z.infer<typeof clientToServerSchema>;

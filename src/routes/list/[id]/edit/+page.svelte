@@ -17,8 +17,12 @@
 				return;
 			}
 		});
+		const interval = setInterval(() => {
+			send({ type: 'refresh' });
+		}, 60 * 1000);
 		return () => {
 			ws.close();
+			clearInterval(interval);
 		};
 	});
 	function send(msg: ClientToServer) {
@@ -31,6 +35,12 @@
 <svelte:head>
 	<title>Edit your Xmas List</title>
 </svelte:head>
+
+<svelte:window
+	onfocus={() => {
+		send({ type: 'refresh' });
+	}}
+/>
 
 <main class="flex max-w-sm flex-col p-4">
 	<h1 class="mb-4 text-lg">Editing Xmas List</h1>
